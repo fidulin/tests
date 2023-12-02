@@ -91,6 +91,7 @@ char* derivation(char* str_input){
                 return str_output;
             }
     }
+    //TODO: implement the derivation
         
     return str_output;
 }
