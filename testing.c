@@ -77,7 +77,7 @@ char* derivation(char* str_input){
                 i++;
             }
             else if(str_input[i] == 'x'){
-                //todo
+                //TODO:
                 FSM_state = variable;
                 i++;
             }
