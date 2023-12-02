@@ -48,6 +48,7 @@ char* derivation(char* str_input){
     enum FSM_state_struct FSM_state = start;
 
     //some comment
+    //some other comment
 
     STR_ALLOC tmp_str;
     switch(FSM_state){
