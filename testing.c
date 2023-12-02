@@ -15,7 +15,7 @@ void str_append(char symbol,STR_ALLOC *str){
     if(str->allocated == 0){
         str->string = malloc(sizeof(char)*8);
         if(str->string == NULL){
-            exit(ERR_INTERNAL);
+            exit(0);
         }
         str->allocated = 8;
     }
@@ -23,7 +23,7 @@ void str_append(char symbol,STR_ALLOC *str){
     if(str->allocated <= str->strlen+1){
         char* tmpstr = malloc(sizeof(char)*(2 * str->allocated));
         if(tmpstr == NULL){
-            exit(ERR_INTERNAL);
+            exit(0);
         }
 
         for(int i=0; i<str->strlen; i++){ //copying string to temporary
@@ -46,6 +46,8 @@ char* derivation(char* str_input){
     int i=0;
     enum FSM_state_struct {start, number, variable, operator, end};
     enum FSM_state_struct FSM_state = start;
+
+    //some comment
 
     STR_ALLOC tmp_str;
     switch(FSM_state){
